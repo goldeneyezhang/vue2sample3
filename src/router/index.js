@@ -44,5 +44,8 @@ export default new Router({
       path: '/books:id',
       components: BookDetail
     }
-  ]
+  ],
+  linkActiveClass: 'active',
+  mode: 'history',
+  base: __dirname
 })
