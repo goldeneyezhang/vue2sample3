@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <transition name="slide-fade">
     <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -19,5 +21,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.slide-fade-enter-active{
+  transition: all .3s ease;
+}
+.slide-face-leave-active{
+  transition: all .3s cubic-bezier(1.0,0.5,0.8,1.0);
+}
+.slide-face-enter, .slide-fade-leave-active{
+  transform:translateX(-430px);
+  opacity: 0
 }
 </style>

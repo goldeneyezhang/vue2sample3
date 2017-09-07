@@ -23,8 +23,8 @@ export default new Router({
           component: Home
         },
         {
-          path: 'category',
-          name: 'Category',
+          path: 'categories',
+          name: 'Categories',
           component: Category
         },
         {
