@@ -6,6 +6,7 @@ import Home from '@/components/Home'
 import Category from '@/components/Category'
 import Cart from '@/components/Cart'
 import Me from '@/components/Me'
+import BookDetail from '@/components/BookDetail'
 Vue.use(Router)
 
 export default new Router({
@@ -13,27 +14,35 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: Hello
+      component: Hello,
+      children:
+      [
+        {
+          path: 'home',
+          name: 'Home',
+          component: Home
+        },
+        {
+          path: 'category',
+          name: 'Category',
+          component: Category
+        },
+        {
+          path: 'cart',
+          name: 'Cart',
+          component: Cart
+        },
+        {
+          path: 'me',
+          name: 'Me',
+          component: Me
+        }
+      ]
     },
     {
-      path: '/home',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/category',
-      name: 'Category',
-      component: Category
-    },
-    {
-      path: '/cart',
-      name: 'Cart',
-      component: Cart
-    },
-    {
-      path: '/me',
-      name: 'Me',
-      component: Me
+      name: 'BookDetail',
+      path: '/books:id',
+      components: BookDetail
     }
   ]
 })
