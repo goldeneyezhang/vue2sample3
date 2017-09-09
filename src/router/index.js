@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import Hello from '@/Hello'
 // 引入创建的四个页面
-import Home from '@/components/Home'
-import Category from '@/components/Category'
-import Cart from '@/components/Cart'
-import Me from '@/components/Me'
-import BookDetail from '@/components/BookDetail'
+import Home from '@/Home'
+import Category from '@/Category'
+import Cart from '@/Cart'
+import Me from '@/Me'
+import BookDetail from '@/BookDetail'
 Vue.use(Router)
 
 export default new Router({
