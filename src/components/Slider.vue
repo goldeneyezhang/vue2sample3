@@ -56,8 +56,10 @@ var swiper = new Swiper(this.$refs.slider, {
                 autoplayDisableOnInteraction: false
             })
     export default{
-        props: ['slides'],
-
+        slides: [
+            {id: 1, img_url: './fixtures/sliders/t1.svg'},
+            {id: 2, img_url: './fixtures/sliders/t2.svg'}
+        ],
         mounted () {
           debugger
           swiper
