@@ -6,6 +6,12 @@
         <label>快讯</label>
         <span>{{announcement}}</span>
     </div>
+    <div class="section">
+   <book-list :books="latestUpdated" heading="最新更新"></book-list>
+    </div>
+    <div class="section">
+    <book-list :books="recommended" heading="编辑推荐"></book-list>
+    </div>
   </div>
 </div>
 </template>
@@ -17,6 +23,8 @@ import BookList from './components/BookList.vue'
 import t1 from '../fixtures/sliders/t1.svg'
 import t2 from '../fixtures/sliders/t2.svg'
 import datou from '../fixtures/sliders/datou.jpg'
+import c1 from '../fixtures/covers/1.svg'
+import c2 from '../fixtures/covers/2.svg'
 export default{
   components: {Slider, BookList},
   data () {
@@ -32,7 +40,7 @@ export default{
         "id": 1,
         "title": "揭开数据真相，从小白到数据分析达人",
         "authors": ["Edward Zaccaro", "Daniel Zaccaro"],
-        "img_url": "1.svg"
+        "img_url": c1
       }
     ],
     recommended: [
@@ -40,7 +48,7 @@ export default{
         "id": 1,
         "title": "揭开数据真相，从小白到数据分析达人",
         "authors": ["Edward Zaccaro", "Daniel Zaccaro"],
-        "img_url": "1.svg"
+        "img_url": c2
       }
     ]
     }

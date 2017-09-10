@@ -1,13 +1,33 @@
 <template>
-<div>
-<div class="section">
-    <book-list :books="latestUpdated" heading="最新更新">
-    </book-list>
+<div class="book-list">
+ <div class="header">
+    <div class="heading">{{heading}}</div>
+    <div class="more">更多...</div>
+ </div>
+ <div class="book-items">
+   <div class="book" 
+    v-for="book in books"
+    tag="div"
+    >
+     <div class="cover">
+       <img :src="book.img_url"/>
+    </div>
+    <div class="title">{{book.title}}</div>
+    <div class="authors">{{book.authors | join}}</div>
+   </div>
   </div>
-   <div class="section">
-    <book-list :books="recommended" heading="编辑推荐">
-    </book-list>
-  </div>
-  </div>
+</div>
   </template>
-  
+  <script type="text/ecmascript-6">
+    export default {
+      props: [
+        'heading',
+        'books'
+      ],
+      filters: {
+        join (args) {
+          return args.join(',')
+        }
+      }
+    }
+  </script>
