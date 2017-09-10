@@ -49,15 +49,15 @@
     import 'swiper/dist/css/swiper.min.css'
 
     export default{
+        props: ['slides'],
         mounted () {
-         var swiper = new Swiper(this.$refs.slider, {
-                pagination: this.$refs.pagination,
+         var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
                 paginationClickable: true,
-                spaceBetween: 30,
-                centeredSlides: true,
-                autoplay: 2500,
-                autoplayDisableOnInteraction: false,
-                  onTouchEnd: function () {
+                loop: true,
+                speed: 600,
+                autoplay: 4000,
+                onTouchEnd: function () {
                     swiper.startAutoplay()
                 }
             })

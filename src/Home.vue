@@ -14,14 +14,18 @@
 <script>
 import Slider from './components/Slider.vue'
 import BookList from './components/BookList.vue'
+import t1 from '../fixtures/sliders/t1.svg'
+import t2 from '../fixtures/sliders/t2.svg'
+import datou from '../fixtures/sliders/datou.jpg'
 export default{
   components: {Slider, BookList},
   data () {
     return {
     announcement: '今日上架的图书全部8折',
     slides: [
-    {id: 1, img_url: './fixtures/sliders/t1.svg'},
-    {id: 2, img_url: './fixtures/sliders/t2.svg'}
+    {id: 1, img_url: t1},
+    {id: 2, img_url: t2},
+    {id: 3, img_url: datou}
     ],
     latestUpdated: [
       {
