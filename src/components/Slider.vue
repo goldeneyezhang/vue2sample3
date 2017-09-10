@@ -45,24 +45,22 @@
     }
 </style>
 <script type="text/ecmascript-6">
-    import Swiper from "swiper"
-    import 'swiper/dist/css/swiper.css'
-var swiper = new Swiper(this.$refs.slider, {
+    import Swiper from 'swiper'
+    import 'swiper/dist/css/swiper.min.css'
+
+    export default{
+        mounted () {
+         var swiper = new Swiper(this.$refs.slider, {
                 pagination: this.$refs.pagination,
                 paginationClickable: true,
                 spaceBetween: 30,
                 centeredSlides: true,
                 autoplay: 2500,
-                autoplayDisableOnInteraction: false
+                autoplayDisableOnInteraction: false,
+                  onTouchEnd: function () {
+                    swiper.startAutoplay()
+                }
             })
-    export default{
-        slides: [
-            {id: 1, img_url: './fixtures/sliders/t1.svg'},
-            {id: 2, img_url: './fixtures/sliders/t2.svg'}
-        ],
-        mounted () {
-          debugger
-          swiper
         }
     }
 </script>

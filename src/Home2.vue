@@ -1,23 +1,17 @@
 <template>
 <div>
   <div class="section"> 
-    <slider :slides="slides"></slider>
-     <div class="announcement">
-        <label>快讯</label>
-        <span>{{announcement}}</span>
-    </div>
+    <slider :slides="page_data.top"></slider>
   </div>
 </div>
 </template>
 <style>
 </style>
 <script>
-import Slider from './components/Slider.vue'
+import Slider from './components/slider.vue'
 import BookList from './components/BookList.vue'
 export default{
   components: {Slider, BookList},
-  data () {
-    return {
     announcement: '今日上架的图书全部8折',
     slides: [
     {id: 1, img_url: './fixtures/sliders/t1.svg'},
@@ -39,7 +33,5 @@ export default{
         "img_url": "1.svg"
       }
     ]
-    }
-  }
 }
 </script>
